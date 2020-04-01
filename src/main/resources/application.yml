@@ -1,0 +1,25 @@
+# Mocks
+mocks:
+  employees:
+    - employeeID: 1
+      firstName: f_emp_1
+      lastName: l_emp_1
+      dob: dob_1
+      phone: phone_1
+      address:
+        firstLine: firstLine_1
+        secondLine: secondLine_1
+        postCode: postCode_1
+        city: city_1
+        country: country_1
+    - employeeID: 2
+      firstName: f_emp_2
+      lastName: l_emp_2
+      dob: dob_2
+      phone: phone_2
+      address:
+        firstLine: firstLine_2
+        secondLine: secondLine_2
+        postCode: postCode_2
+        city: city_2
+        country: country_2
