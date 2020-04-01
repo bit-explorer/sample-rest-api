@@ -10,7 +10,7 @@ import sample.rest.api.service.IEmployeeService;
 @Service
 public class EmployeeService implements IEmployeeService {
 
-  private List<Employee> employees;
+  private transient List<Employee> employees;
 
   @Autowired
   public EmployeeService(MockEmployees mockEmployees) {
@@ -19,13 +19,12 @@ public class EmployeeService implements IEmployeeService {
 
   @Override
   public Employee getEmployeeById(String id) {
-    Employee employee = null;
     for (Employee emp : employees) {
       if (emp.getEmployeeID().equals(id)) {
-        employee = emp;
+        return emp;
       }
     }
-    return employee;
+    return null;
   }
 
   @Override
