@@ -15,18 +15,12 @@ plugins {
     id 'application'
 }
 
-pmd {
-    toolVersion = "6.22.0"
+springBoot {
+    mainClassName = 'sample.rest.api.Application' // to change the name of main class from 'App'
 }
 
-mainClassName = "sample.rest.api.Application"
-
-sourceSets {
-    main {
-        java {
-            srcDirs = ['src']
-        }
-    }
+pmd {
+    toolVersion = "6.22.0"
 }
 
 repositories {
