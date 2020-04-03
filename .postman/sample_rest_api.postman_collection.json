@@ -1,86 +1,101 @@
 {
-	"info": {
-		"_postman_id": "7a3eb29b-4449-4617-a8a1-6151c1aa0e52",
-		"name": "sample_rest_api",
-		"description": "# sample_rest_api\n\nThis collection holds sample requests for all the endpoints for sample_rest_api",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-	},
-	"item": [
-		{
-			"name": "GET - Greeting",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://{{host}}:{{port}}/greeting",
-					"protocol": "http",
-					"host": [
-						"{{host}}"
-					],
-					"port": "{{port}}",
-					"path": [
-						"greeting"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get - Employee By Id",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://{{host}}:{{port}}/employee/1",
-					"protocol": "http",
-					"host": [
-						"{{host}}"
-					],
-					"port": "{{port}}",
-					"path": [
-						"employee",
-						"1"
-					]
-				}
-			},
-			"response": []
-		}
-	],
-	"event": [
-		{
-			"listen": "prerequest",
-			"script": {
-				"id": "bfe8734c-76a3-48e6-bbfd-b47b41f0b061",
-				"type": "text/javascript",
-				"exec": [
-					""
-				]
-			}
-		},
-		{
-			"listen": "test",
-			"script": {
-				"id": "5d5e89f4-6ba8-4434-837f-ca5b136906ba",
-				"type": "text/javascript",
-				"exec": [
-					""
-				]
-			}
-		}
-	],
-	"variable": [
-		{
-			"id": "3aa6b41a-8158-419f-ad7f-74db90504e76",
-			"key": "host",
-			"value": "localhost",
-			"type": "string"
-		},
-		{
-			"id": "d74a1aba-575d-4df2-bd2a-5a9e124d4c14",
-			"key": "port",
-			"value": "8080",
-			"type": "string"
-		}
-	],
-	"protocolProfileBehavior": {}
+  "info": {
+    "_postman_id": "7a3eb29b-4449-4617-a8a1-6151c1aa0e52",
+    "name": "sample_rest_api",
+    "description": "# sample_rest_api\n\nThis collection holds sample requests for all the endpoints for sample_rest_api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET - Greeting",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "c816b2ca-6678-4e6e-95a8-029f33bf8439",
+            "exec": [
+              "pm.test(\"Status test\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://{{host}}:{{port}}/greeting",
+          "protocol": "http",
+          "host": ["{{host}}"],
+          "port": "{{port}}",
+          "path": ["greeting"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get - Employee By Id",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "3c5174d2-98ca-4490-ac52-6a6512c96776",
+            "exec": [
+              "pm.test(\"Status test\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://{{host}}:{{port}}/employee/1",
+          "protocol": "http",
+          "host": ["{{host}}"],
+          "port": "{{port}}",
+          "path": ["employee", "1"]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "bfe8734c-76a3-48e6-bbfd-b47b41f0b061",
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "5d5e89f4-6ba8-4434-837f-ca5b136906ba",
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "id": "ce464666-481c-4c7a-9a1d-3e97b0ea2e43",
+      "key": "host",
+      "value": "localhost",
+      "type": "string"
+    },
+    {
+      "id": "4f4b43c4-4b64-41cd-baa8-0185e436e1c5",
+      "key": "port",
+      "value": "8080",
+      "type": "string"
+    }
+  ],
+  "protocolProfileBehavior": {}
 }

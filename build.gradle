@@ -15,7 +15,7 @@ plugins {
     id 'application'
 }
 
-springBoot {
+application {
     mainClassName = 'sample.rest.api.Application' // to change the name of main class from 'App'
 }
 
@@ -52,10 +52,6 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.4.2'
 }
 
-application {
-    // Define the main class for the application
-    mainClassName = 'sample.rest.api.App'
-}
 
 test {
     // Use junit platform for unit tests

@@ -1,8 +1,13 @@
 package sample.rest.api.model;
 
-import lombok.Data;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.ToString;
 
-@Data
+
+@Getter
+@ToString
+@AllArgsConstructor
 public class Greeting {
 
   private final long id;
